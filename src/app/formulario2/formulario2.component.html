@@ -1,5 +1,5 @@
 <article>
-  <form (ngSubmit)="process()">
+  <form (ngSubmit)="process()" #formContact="ngForm">
     <div>
       <label for="">Nombre:</label>
       <input type="text" name="nombre" placeholder="ingrese su nombre" [(ngModel)]="persona.nombre" required="" #name="ngModel">
@@ -15,7 +15,7 @@
       la edad es obligatoria
     </span>
     <div>
-      <button>Enviar</button>
+      <button [disabled]="formContact.invalid">Enviar</button>
     </div>
   </form>
 </article>
