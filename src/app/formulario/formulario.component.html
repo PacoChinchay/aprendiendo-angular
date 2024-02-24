@@ -1,0 +1,17 @@
+<input type="text" placeholder="Ingrese su nombre" #name>
+<button (click)="console(name.value)">
+  mostrar en consola
+</button>
+ 
+<span *ngIf="openAlert; else mensaje"> <!-- esta directiva elimina el elemento del DOM -->
+  {{name.value}} . Se envió el mensaje
+  <button style="color: red; padding: 3px 6px;" (click)="openAlert = false">
+    X
+  </button>
+</span>
+
+<ng-template #mensaje>
+  <span style="color: red;">
+    ingrese un nombre
+  </span>
+</ng-template>
