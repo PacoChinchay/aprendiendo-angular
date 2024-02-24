@@ -1,9 +1,19 @@
 <div>
-  <button [class.disabled]="btn_disable" (click)="text_color = 'red'">Rojo</button>
-  <button [class]="{'disabled': btn_disable, 'blanco': btn_disable}" (click)="text_color = 'green'">Verde</button>
-  <button [class.disabled]="btn_disable" (click)="text_color = 'blue'">Azul</button>
+  <button [disabled]="btn_disabled" [class.color]="btn_color" (click)="text_color = 'red'">Rojo</button>
+  <button [disabled]="btn_disabled" [class]="{'color': btn_color, 'blanco': btn_color}" (click)="text_color = 'green'">Verde</button>
+  <button [disabled]="btn_disabled" [class.color]="btn_color" (click)="text_color = 'blue'">Azul</button>
 </div>
 
 <p [class]="text_color">no es lo que parece, {{ texto }}</p>
 
-<button (click)="btn_disable = !btn_disable">Activar/Desactivar</button>
+<button (click)="btn_color = !btn_color">color red</button>
+<button (click)="btn_disabled = !btn_disabled">Activar/desactivar</button>
+
+<hr>
+
+<div>
+  <button (click)="ChangeSrc('btn-1')">img 1</button>
+  <button (click)="ChangeSrc('btn-2')">img 2</button>
+</div>
+
+<img [src]="src" alt="">
