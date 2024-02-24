@@ -1,0 +1,9 @@
+<div>
+  <button [class.disabled]="btn_disable" (click)="text_color = 'red'">Rojo</button>
+  <button [class]="{'disabled': btn_disable, 'blanco': btn_disable}" (click)="text_color = 'green'">Verde</button>
+  <button [class.disabled]="btn_disable" (click)="text_color = 'blue'">Azul</button>
+</div>
+
+<p [class]="text_color">no es lo que parece, {{ texto }}</p>
+
+<button (click)="btn_disable = !btn_disable">Activar/Desactivar</button>

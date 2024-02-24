@@ -1,0 +1,16 @@
+.red {  
+  color: green;
+}
+.green {
+  color: blue;
+}
+.blue {
+  color: red;
+}
+.disabled {
+  background-color: red;
+}
+
+.blanco {
+  color: white
+}
