@@ -1,3 +1,16 @@
 h1 {
   color: #09f;
+  text-align: center;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: center;
+}
+
+article {
+  background: #2f4757;
+  padding: 10px;
 }
