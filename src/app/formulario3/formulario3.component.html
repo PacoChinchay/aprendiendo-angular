@@ -1,19 +1,19 @@
 <h3>Formulario Reactivo</h3>
 <article>
-  <form>
+  <form [formGroup]="formUser">
     <div>
       <label for="">Nombre:</label>
-      <input type="text" [formControl]="name" placeholder="ingrese su nombre">
+      <input type="text" formControlName="name" placeholder="ingrese su nombre">
       <span [hidden]="name.valid || name.pristine">El nombre es obligatorio</span>
     </div>
     <div>
       <label for="">Email:</label>
-      <input type="email" [formControl]="email" placeholder="ingrese su email">
+      <input type="email" formControlName="email" placeholder="ingrese su email">
       <span *ngIf="email.errors?.['required'] && email.dirty">El email es obligatoria</span>
       <span *ngIf="email.errors?.['email']">El email no es valido</span>
     </div>
     <div>
-      <button>enviar</button>
+      <button [disabled]="formUser.invalid">enviar</button>
     </div>
   </form>
 </article>
