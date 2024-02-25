@@ -7,9 +7,7 @@ import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms'
   styleUrl: './formulario3.component.css'
 })
 export class Formulario3Component {
-  constructor(private fb: FormBuilder) {
-
-  }
+  constructor(private fb: FormBuilder) {}
 
   formUser = this.fb.group({
     'name': ['', Validators.required],

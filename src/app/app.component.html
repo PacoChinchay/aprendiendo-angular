@@ -7,4 +7,7 @@
   <article><app-switch></app-switch></article>
   <article><app-formulario2></app-formulario2></article>
   <article><app-formulario3></app-formulario3></article>
+
+  <input type="text" [(ngModel)]="title">
+  <article><app-children [title]="title" (titileChange)="title = $event"></app-children></article>
 </main>
