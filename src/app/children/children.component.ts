@@ -8,9 +8,9 @@ import { Component, Input, Output, EventEmitter } from '@angular/core';
 export class ChildrenComponent {
   @Input() title?: string
 
-  @Output() titileChange = new EventEmitter<string>()
+  @Output() titleChange = new EventEmitter<string>()
 
   emitTitleChange() {
-    this.titileChange.emit(this.title)
+    this.titleChange.emit(this.title)
   }
 }

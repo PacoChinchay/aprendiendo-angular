@@ -1,6 +1,6 @@
 <h1>{{ title }}</h1>
 <main>
-  <article><app-contador/></article>
+  <!-- <article><app-contador/></article>
   <article><app-botones></app-botones></article>
   <article><app-formulario></app-formulario></article>
   <article><app-bucles></app-bucles></article>
@@ -9,5 +9,9 @@
   <article><app-formulario3></app-formulario3></article>
 
   <input type="text" [(ngModel)]="title">
-  <article><app-children [title]="title" (titileChange)="title = $event"></app-children></article>
+  <article><app-children [title]="title" (titleChange)="title = $event"></app-children></article> -->
+  
+  <h2>servicios</h2>
+  <article><app-add-message></app-add-message></article>
+  <article><app-list-message></app-list-message></article>
 </main>
